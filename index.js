@@ -35,7 +35,7 @@ const findOrCreateRoom = async (roomName) => {
       await twilioClient.video.rooms.create({
         uniqueName: roomName,
         type: "group",
-        audioOnly: true,
+        // audioOnly: true,
       });
     } else {
       // let other errors bubble up
