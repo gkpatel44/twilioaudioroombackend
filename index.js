@@ -64,7 +64,9 @@ const getAccessToken = (roomName) => {
   // serialize the token and return it
   return token.toJwt();
 };
-
+app.get("/", (req, res) => {
+  res.send("hello welcome to twilio server")
+})
 app.post("/join-room", async (req, res) => {
   // return 400 if the request has an empty body or no roomName
   if (!req.body || !req.body.roomName) {
